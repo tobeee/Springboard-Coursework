@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538121041549.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3543558721",
+    "id" : "F0036894",
+    "lastKnownWriteTime" : 1538402439,
+    "last_content_update" : 1538402439254,
+    "path" : "~/Documents/Data_Science/Module 3/script.r",
+    "project_path" : "script.r",
+    "properties" : {
+        "cursorPosition" : "32,7",
+        "scrollLine" : "22"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

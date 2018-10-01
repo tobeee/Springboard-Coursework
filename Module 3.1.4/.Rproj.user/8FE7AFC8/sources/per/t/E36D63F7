@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538121334397.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1148724058",
+    "id" : "E36D63F7",
+    "lastKnownWriteTime" : 1538402468,
+    "last_content_update" : 1538402468070,
+    "path" : "~/Documents/Data_Science/Intro/Intro/guide.rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "180,4",
+        "scrollLine" : "165"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
