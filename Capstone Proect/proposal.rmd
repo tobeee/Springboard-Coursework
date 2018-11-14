@@ -1,0 +1,69 @@
+---
+title: "Capstone Proect for Sprinboard"
+author: "T Green"
+date: "14 Nov 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Project Summary
+
+The goal of this project is get a better understanding of how R is used to clean data and perform basic machine learning, using a real life data source. The project will culminate in a report written in an R Notepad which will outline the individual steps taken to manipulate and present the data.
+
+
+
+## Data Summary
+
+The data is downloaded from Kaggle https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe and contains over 500,000 reviews of hotels with the following data structure. This amount of data is a good size to be used to create accurate prediction models
+
+| Column Header                              	| Data Type 	| Notes 	|
+|--------------------------------------------	|-----------	|-------	|
+|                                            	|           	|       	|
+| Hotel_Address                              	|     str        |       	|
+| Additional_Number_of_Scoring               	|           	   |  Not used     	|
+| Review_Date                                	|     date       |       	|
+| Average_Score                              	|     float   	 |       	|
+| Hotel_Name                                 	|     str        |       	|
+| Reviewer_Nationality                       	|     str     	 |       	|
+| Negative_Review                            	|     str      	 |       	|
+| Review_Total_Negative_Word_Counts          	|     int     	 |       	|
+| Total_Number_of_Reviews                    	|     int     	 |       	|
+| Positive_Review                            	|     str      	 |       	|
+| Review_Total_Positive_Word_Counts          	|     int     	 |       	|
+| Total_Number_of_Reviews_Reviewer_Has_Given 	|     int    	   |       	|
+| Reviewer_Score                             	|     float      |       	|
+| Tags                                       	|     [str]      |       	|
+| days_since_review                          	|     str      	 | needs to be int      	|
+| lat                                        	|     float      |       	|
+| lng                                        	|     float      |       	|
+
+## Data Exploration Ideas
+
+Column names are in *italics*
+
+1. Group Hotels by city/country. This could be done by either looking at the *address* string or using the *lat*/*long*. It's obviously much harder to parse a string to work out if its a country, but relying on *lat*/*long* will require learning an R library to help work out where the place is. 
+
+  Risks - With over 500k rows we might hit rate limiting issues so this could be potentially tricky to work out
+
+  Questions - Is there an easy library for finding country names in strings? Is there a good free geocder that can handle 500k requests?
+
+2. If certain nationalities prefer visiting certain parts of the world. This could be done by looking at the *Reviewer_Nationality* field, and a similar address look up to 1. above
+
+Questions - What would be the best way to visualise this data? Would a graph explain it well?
+
+3. Clustering review scores(*average_score*) with *tags* to see if there is some corrolation between them. Given a tag or combination of tags could we predict a score
+
+Questions - how would this be possible with multiple tags?
+
+4. Sentiment analysis of *positive* and *negative* reviews to see how positive or negative they are actually  positive or negative
+ 
+Questions - do R libraries exist to perform this kind of analysis or will we need to rely on third party services?
+
+5. Does the month(*review_date*) a place was visited in effect it's *average score*?
+
+6. Looking to see if reviews of places improve over certain time periods ( ie splitting the *time_since_reviewed* into 10 buckets, and seeing if they improve or decrease over time)
+
+Questions - how would the data look in this example?
